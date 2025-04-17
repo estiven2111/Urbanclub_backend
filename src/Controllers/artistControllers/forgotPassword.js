@@ -21,11 +21,12 @@ const forgotPassword = async (email) => {
         const config = {
             host: "smtp.gmail.com",
             port: 587,
+            secure: false, 
             auth: {
-                user: EMAIL_ADDRES,
-                pass: PASSWORD_EMAIL
-            }
-        }
+              user: EMAIL_ADDRES,
+              pass: PASSWORD_EMAIL,
+            },
+          };
 
         const mensaje = {
             from: EMAIL_ADDRES,

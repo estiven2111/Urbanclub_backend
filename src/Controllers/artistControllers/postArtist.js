@@ -147,9 +147,9 @@ const postArtist = async (req) => {
             </div>
         </body>`
         }
-        // const transport = nodemailer.createTransport(config);
+        const transport = nodemailer.createTransport(config);
 
-        // const info = await transport.sendMail(mensaje);
+        const info = await transport.sendMail(mensaje);
         const getall = getArtistInfo(newArtist.email,password)
         return (getall)
     } catch (error) {
